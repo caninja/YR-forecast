@@ -9,7 +9,7 @@ function yr($vare = '')
 	$url = "http://www.yr.no/sted/Norge/Oppland/Lillehammer/Lillehammer/varsel.xml" ; 
 	$xml = simplexml_load_file($url) or die("en hel feil skjedde.");
   
-  # XML analysering til variabler.
+	# XML analysering til variabler.
 	$sted = $xml->location[0]->name;
 	$dato = $xml->forecast->tabular->time[$vare]['from'];
 	$periode = $xml->forecast->tabular->time[$vare]['period'];
@@ -44,7 +44,8 @@ function yr($vare = '')
 ########################################################################
 ?>
 
-<html><head><title><?PHP echo $Betaling; ?></title></title>
+<html><head><title><?PHP echo $Betaling; ?></title>
+<!-- --------------------------------------------------------------- -->
 <link rel="stylesheet" type="text/css" href="index.css">
 </head><body>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -67,5 +68,5 @@ elseif ($obj > 36){$obj = "36";} // stopp på 36. ?>
 <div class="divTableCell">vindstyrke</div>
 </div>
 <?PHP $tall = "$obj"; for ($i = 0 ; $i < $tall; $i++){ $func = 'yr'; $func($i); } ?>
-<!-- caninja -->
+<!-- Fredrik ----------------------------------------------- YR.no -->
 </div></div></body></html>
