@@ -46,7 +46,7 @@ function yr($vare = '')
 
 <html><head><title><?PHP echo $Betaling; ?></title>
 <!-- --------------------------------------------------------------- -->
-<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="css.css">
 </head><body>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 <input type="text" name="post" /> Antall objekter.
