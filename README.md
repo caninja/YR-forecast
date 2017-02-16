@@ -3,6 +3,8 @@ Henter værdata fra YR.
 
 Krever php5-xml
 
+PHP5 cache funksjonen krever nok at du oppretter en template fil på forhånd, med riktig eierskap og rettigheter.
+
 Data hentes og mellomlagres med PHP, men du kan også bruke crontab.
 
 Værdata produseres og fremstilles i en nøytral tabell, som er lett og tilpasse.
