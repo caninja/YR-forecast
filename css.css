@@ -1,6 +1,7 @@
 .divTable{
 	display: table;
 	width: 100%;
+	max-width: 800px;
 }
 .divTableRow {
 	display: table-row;
